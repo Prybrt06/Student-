@@ -18,13 +18,16 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xFF8179FF),
-        title: Text(
-          "Hello User,\n Here's your classmates",
-          style: TextStyle(
-            fontSize: 14,
-            fontWeight: FontWeight.w600,
+        title: Padding(
+          padding: const EdgeInsets.only(left: 29.0),
+          child: Text(
+            "Hello User,\n Here's your classmates",
+            style: TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.w600,
+            ),
+            textAlign: TextAlign.center,
           ),
-          textAlign: TextAlign.center,
         ),
         toolbarHeight: 80,
         actions: [
@@ -59,11 +62,6 @@ class HomePage extends StatelessWidget {
                 right: 13,
               ),
               child: Container(
-                // child: ListView(
-                //   children: [
-
-                //   ],
-                // ),
                 height: 615,
                 child: ListView(
                   children: [

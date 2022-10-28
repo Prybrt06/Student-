@@ -37,13 +37,13 @@ class DrawerWidget extends StatelessWidget {
                     padding: const EdgeInsets.only(left: 15),
                     child: GestureDetector(
                       onTap: () {
-                        Navigator.pop(context);
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const ProfilePage(),
-                          ),
-                        );
+                        // Navigator.pop(context);
+                        // Navigator.push(
+                        //   context,
+                        //   MaterialPageRoute(
+                        //     builder: (context) => const ProfilePage(),
+                        //   ),
+                        // );
                       },
                       child: Text(
                         "Priyabrat Duarah",
@@ -58,13 +58,13 @@ class DrawerWidget extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  Navigator.pop(context);
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const ProfilePage(),
-                    ),
-                  );
+                  // Navigator.pop(context);
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(
+                  //     builder: (context) => const ProfilePage(),
+                  //   ),
+                  // );
                 },
                 child: DrawerButton(
                   button: "Profile",

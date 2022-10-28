@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatelessWidget {
-  const ProfilePage({super.key});
+  final String Name;
+  final int frndCount;
+  final int clsFrndCount;
+  final bool isMale;
+  ProfilePage({
+    @required this.Name = "Hello",
+    required this.frndCount,
+    required this.clsFrndCount,
+    required this.isMale,
+  });
 
   @override
   Widget build(BuildContext context) {
-    int frndCount = 13;
-    int clsFrndCount = 3;
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
@@ -16,14 +23,14 @@ class ProfilePage extends StatelessWidget {
               Container(
                 width: 180,
                 height: 184,
-                child: Image.asset("assets/images/maleAvatar.png"),
+                child: (isMale)? Image.asset("assets/images/maleAvatar.png") : Image.asset("assets/images/femaleAvatar.png"),
               ),
               Padding(
                 padding: EdgeInsets.only(
                   top: 15,
                 ),
                 child: Text(
-                  "Priyabrat Duarah",
+                  "$Name",
                   style: TextStyle(
                     color: Color(0xFF6C63FF),
                     fontSize: 26,
@@ -66,7 +73,9 @@ class ProfilePage extends StatelessWidget {
                         ),
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: Center(child: Text("$clsFrndCount friends"),),
+                      child: Center(
+                        child: Text("$clsFrndCount friends"),
+                      ),
                     ),
                     Spacer(),
                     Spacer(),

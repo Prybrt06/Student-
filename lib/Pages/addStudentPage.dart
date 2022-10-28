@@ -9,12 +9,25 @@ class AddStudentPage extends StatelessWidget {
       backgroundColor: Color(0xFFECEBFF),
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: 25,
-            vertical: 100,
+          padding: EdgeInsets.only(
+            left: 25,
+            right: 25,
+            top: 100,
+            bottom: 30,
           ),
           child: Column(
             children: [
+              Padding(
+                padding: const EdgeInsets.only(bottom: 33.0),
+                child: Text(
+                  "Add your new Friend",
+                  style: TextStyle(
+                    color: Color(0xFF6C63FF),
+                    fontSize: 24,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
               AddStudentTextField(
                 type: "Name",
               ),
